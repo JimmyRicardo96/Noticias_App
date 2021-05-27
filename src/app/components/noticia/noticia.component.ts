@@ -1,4 +1,6 @@
+/* eslint-disable no-trailing-spaces */
 import { Component, Input, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
 import { Article } from '../../interfaces/interfaces';
 
 @Component({
@@ -9,7 +11,7 @@ import { Article } from '../../interfaces/interfaces';
 export class NoticiaComponent implements OnInit {
 @Input() noticia: Article;
 @Input() indice: number;
-  constructor() { }
+  constructor( private actionSheetCtrl: ActionSheetController) { }
 
   ngOnInit() {}
 
@@ -17,5 +19,40 @@ export class NoticiaComponent implements OnInit {
     console.log('Noticia', this.noticia.url);
    // const browser = this.iab.create( this.noticia.url, '_system');
   }
+  
+  async lanzarMenu(){
+    const actionSheet = await this.actionSheetCtrl.create({
+      
+      buttons: [
+         {
+        text: 'Compartir',
+        icon: 'share',
+        cssClass: 'action-dark',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, {
+        text: 'Fsvorito',
+        icon: 'star',
+        cssClass: 'action-dark',
+        handler: () => {
+          console.log('Favorito');
+        }
+      },
+       {
+        text: 'Cancel',
+        cssClass: 'action-dark',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
 
+    const { role } = await actionSheet.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+    
+  }
 }
