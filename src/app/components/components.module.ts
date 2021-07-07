@@ -5,6 +5,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { IonicModule } from '@ionic/angular';
 
 
+
 @NgModule({
   declarations: [
     NoticiaComponent,

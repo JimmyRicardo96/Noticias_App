@@ -1,6 +1,23 @@
 {
 	"appId": "com.example.Noticias_App",
-	"appName": "Noticias_app",
+	"appName": "NoticiasApp",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	},
+	"cordova": {
+		"preferences": {
+			"ScrollEnabled": "false",
+			"BackupWebStorage": "none",
+			"SplashMaintainAspectRatio": "true",
+			"FadeSplashScreenDuration": "300",
+			"SplashShowOnlyFirstTime": "false",
+			"SplashScreen": "screen",
+			"SplashScreenDelay": "3000"
+		}
+	}
 }
