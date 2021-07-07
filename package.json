@@ -1,5 +1,5 @@
 {
-  "name": "Noticias_app",
+  "name": "noticias_app",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -76,5 +76,14 @@
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-x-socialsharing": {}
     }
+  },
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimmyRicardo96/Noticias_App.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimmyRicardo96/Noticias_App/issues"
   }
 }
