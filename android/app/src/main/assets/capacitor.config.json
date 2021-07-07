@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.Noticias_App",
+	"appName": "Noticias_app",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
